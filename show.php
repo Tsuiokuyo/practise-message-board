@@ -1,7 +1,10 @@
 <title>留言版</title>
 <?php
-require("connect2.php"); //連到資料庫
-$data = mysqli_query($conn,"SELECT * FROM guest order by guestTime desc"); //從guest全選資料並由dest新到舊order by排序
+//連到資料庫
+require("connect2.php");
+//從guest全選資料並由dest新到舊order by排序
+$data = mysqli_query($conn,"SELECT * FROM guest order by guestTime desc");
+
 ?>
 <body>
 <?php
@@ -9,7 +12,8 @@ $data = mysqli_query($conn,"SELECT * FROM guest order by guestTime desc"); //從
 for($i=1;$i<mysqli_num_rows($data);$i++){
 	$rs=mysqli_fetch_assoc($data);
 ?>
- <table align="center">
+<hr>
+ <table>
             <tr>
               <td><?php echo $rs['guestSubject']?></td>
             </tr>
@@ -30,7 +34,7 @@ for($i=1;$i<mysqli_num_rows($data);$i++){
               <td><?php echo $rs['guestContent']?></td>
             </tr>
         </table>
-
+<div align=right><?php echo $rs['guestTime']?></div>
 <?php
 }
 ?>

@@ -28,7 +28,8 @@ $guestContent=$_POST['guestContent'];
 date_default_timezone_set("Asia/Taipei");
 $guestTime = date("Y:m:d H:i:s",time());
 }
-/*已廢棄
+
+/*已不使用的語法
 mysql_query("insert into guest value('','$guestName','$guestEmail','$guestGender','$guestSubject','guestTime','$guestContent','','')"); */
 
 
