@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>留言區</title>
@@ -35,7 +35,7 @@ mysql_query("insert into guest value('','$guestName','$guestEmail','$guestGender
 
 //如果guestName不為空，那麼存入資料庫
 if(isset($guestName)){
-mysqli_query($conn,"insert into guest values ('','$guestName','$guestEmail','$guestGender','$guestSubject','$guestTime','$guestContent','','')");
+mysqli_query($conn,"insert into guest values ('','$guestName','$guestEmail','$guestGender','$guestSubject','$guestTime','$guestContent')");
 header("location:show.php"); //導向show頁面
 }
 ?>
