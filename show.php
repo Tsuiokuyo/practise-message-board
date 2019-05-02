@@ -1,7 +1,7 @@
-<title>留言版</title>
+﻿<title>留言版</title>
 <?php
 //連到資料庫
-require("connect2.php");
+require("login.php");
 //從guest全選資料並由dest新到舊order by排序
 $data = mysqli_query($conn,"SELECT * FROM guest order by guestTime desc");
 

@@ -4,8 +4,8 @@
 <title>留言區</title>
 </head>
 
-<!-- //action="connect2.php" 將資料送入connect2.php //method="post" 方式  -->
-<form action="connect.php" method="post">
+<!-- //action="message.php" 將資料送入message.php 也可使用$_SERVER['PHP_SELF'] //method="post" 方式  -->
+<form action="message.php" method="post">
 暱稱: <input type="text" name="guestName"><br>
 信箱: <input type="text" name="guestEmail"><br>
 性別: <input type="radio" name="guestGender" id="radio" value="男" /> 男
@@ -16,7 +16,7 @@
 </form>
 
 <?php
-require("connect2.php");//引入外部php 用來登入SQL
+require("login.php");//引入外部php 用來登入SQL
 
 // 抓取所有從post.php鍵入的資料
 if(isset($_POST["guestName"])){
